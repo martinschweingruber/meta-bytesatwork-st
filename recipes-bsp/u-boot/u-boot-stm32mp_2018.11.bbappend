@@ -3,6 +3,9 @@
 
 FILESEXTRAPATHS_prepend := "${THISDIR}/${BP}:"
 
+# Increase PR if something changes
+PR="1"
+
 SRC_URI += " \
 	file://0001-board-bytedevkit-Add-initial-version-for-bytedevkit.patch \
 	file://0002-configs-bytedevkit-Add-initial-version.patch \
@@ -12,4 +15,5 @@ SRC_URI += " \
 	file://0006-arm-dts-bytedevkit-u-boot-Add-initial-version.patch \
 	file://0007-arm-bytedevkit-Add-target-bytedevkit.patch \
 	file://0008-stmp32mp1-Append-target-bytedevkit.patch \
+	file://0009-pll-add-config-for-ethernet-without-clk-feedback-fro.patch \
 "
