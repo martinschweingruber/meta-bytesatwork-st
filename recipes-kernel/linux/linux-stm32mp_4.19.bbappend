@@ -4,7 +4,7 @@
 FILESEXTRAPATHS_prepend := "${THISDIR}/${BP}:"
 
 # Increase PR if something changes
-PR="2"
+PR="3"
 
 SRC_URI += " \
 	file://0001-ARM-dts-Add-support-for-byteENGINE-STM32MP1x.patch \
@@ -15,6 +15,7 @@ SRC_URI += " \
 	file://0006-ARM-configs-Add-bytedevkit-fragment.patch \
 	file://0007-video-logo-baw-Move-struct-to-correct-file.patch \
 	file://0008-arm-dts-stm32mp157c-bytedevkit-Enable-1gb-ethernet.patch \
+	file://0009-ARM-dts-Move-core-bytedevkit-description-into-a-dtsi.patch \
 "
 
 KERNEL_CONFIG_FRAGMENTS += "${S}/arch/arm/configs/fragment-901-bytedevkit.config"
