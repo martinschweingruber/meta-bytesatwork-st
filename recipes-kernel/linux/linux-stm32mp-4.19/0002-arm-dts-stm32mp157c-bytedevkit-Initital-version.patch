@@ -1,4 +1,4 @@
-From b66b269efaff593ce82a57807d11ce2007000eac Mon Sep 17 00:00:00 2001
+From ee226dbac9fcb79c8a166d05970b40ed34a8631d Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Oliver=20St=C3=A4bler?= <oliver.staebler@bytesatwork.ch>
 Date: Thu, 25 Jul 2019 15:14:21 +0200
 Subject: [PATCH] arm: dts: stm32mp157c-bytedevkit: Initital version
@@ -8,16 +8,16 @@ This inital version support the following interfaces:
 - SDMMC1 (sd-card)
 - USB-HS
 ---
- arch/arm/boot/dts/stm32mp157c-bytedevkit.dts | 113 +++++++++++++++++++
- 1 file changed, 113 insertions(+)
+ arch/arm/boot/dts/stm32mp157c-bytedevkit.dts | 114 +++++++++++++++++++
+ 1 file changed, 114 insertions(+)
  create mode 100644 arch/arm/boot/dts/stm32mp157c-bytedevkit.dts
 
 diff --git a/arch/arm/boot/dts/stm32mp157c-bytedevkit.dts b/arch/arm/boot/dts/stm32mp157c-bytedevkit.dts
 new file mode 100644
-index 000000000000..6f62e8ad8092
+index 000000000000..dd2697be8aac
 --- /dev/null
 +++ b/arch/arm/boot/dts/stm32mp157c-bytedevkit.dts
-@@ -0,0 +1,113 @@
+@@ -0,0 +1,114 @@
 +// SPDX-License-Identifier: GPL-2.0
 +/*
 + *  Copyright (C) 2019 bytes at work AG - http://www.bytesatwork.ch
@@ -70,6 +70,7 @@ index 000000000000..6f62e8ad8092
 +			drive-push-pull;
 +			slew-rate = <0>;
 +		};
++
 +		pins2 {
 +			pinmux = <STM32_PINMUX('H', 14, AF8)>; /* UART4_RX */
 +			bias-disable;
@@ -80,6 +81,7 @@ index 000000000000..6f62e8ad8092
 +		pins1 {
 +			pinmux = <STM32_PINMUX('H', 13, ANALOG)>; /* UART4_TX */
 +		};
++
 +		pins2 {
 +			pinmux = <STM32_PINMUX('H', 14, AF8)>; /* UART4_RX */
 +			bias-disable;
@@ -119,7 +121,6 @@ index 000000000000..6f62e8ad8092
 +	phys = <&usbphyc_port0>;
 +	phy-names = "usb";
 +	vbus-supply = <&usb_vbus>;
-+
 +	status = "okay";
 +};
 +
@@ -132,5 +133,5 @@ index 000000000000..6f62e8ad8092
 +	st,phy-tuning = <&usb_phy_tuning>;
 +};
 -- 
-2.21.0
+2.20.1
 
