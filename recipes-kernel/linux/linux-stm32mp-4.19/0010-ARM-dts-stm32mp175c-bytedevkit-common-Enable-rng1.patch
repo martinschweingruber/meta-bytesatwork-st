@@ -1,0 +1,25 @@
+From 88d6d4fcdd6087fca935053c846a87466192642a Mon Sep 17 00:00:00 2001
+From: Serafin Leschke <serafin.leschke@bytesatwork.ch>
+Date: Tue, 10 Sep 2019 14:14:29 +0200
+Subject: [PATCH] ARM: dts: stm32mp175c-bytedevkit-common: Enable rng1
+
+This is a prerequisite for fast boot with sshd
+---
+ arch/arm/boot/dts/stm32mp157c-bytedevkit-common.dtsi | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+diff --git a/arch/arm/boot/dts/stm32mp157c-bytedevkit-common.dtsi b/arch/arm/boot/dts/stm32mp157c-bytedevkit-common.dtsi
+index c12d652f40ba..1dd8db70ea52 100644
+--- a/arch/arm/boot/dts/stm32mp157c-bytedevkit-common.dtsi
++++ b/arch/arm/boot/dts/stm32mp157c-bytedevkit-common.dtsi
+@@ -317,3 +317,7 @@
+ &rtc {
+ 	status = "okay";
+ };
++
++&rng1 {
++	status = "okay";
++};
+-- 
+2.20.1
+
