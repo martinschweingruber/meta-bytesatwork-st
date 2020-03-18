@@ -26,13 +26,13 @@ SD Card
 SD card images are created using *flashlayout* from [meta-st-stm32mp](https://github.com/STMicroelectronics/meta-st-stm32mp). Please make sure `gdisk` is installed on your system.
 
 The following example shows how to create a bootable SD card with the image
-`devbase-image-bytesatwork` from
+`bytesatwork-minimal-image` from
 [meta-bytesatwork](https://github.com/bytesatwork/meta-bytesatwork.git) from a
 sourced Yocto environment:
 
 	cd $BUILDDIR/tmp/deploy/images/bytedevkit
-	./scripts/create_sdcard_from_flashlayout.sh flashlayout_devbase-image-bytesatwork/FlashLayout_sdcard_stm32mp157c-bytedevkit.tsv
-	dd if=flashlayout_devbase-image-bytesatwork_FlashLayout_sdcard_stm32mp157c-bytedevkit.raw of=/dev/sdX bs=1M && sync
+	./scripts/create_sdcard_from_flashlayout.sh flashlayout_bytesatwork-minimal-image/FlashLayout_sdcard_stm32mp157c-bytedevkit.tsv
+	dd if=flashlayout_bytesatwork-minimal-image_FlashLayout_sdcard_stm32mp157c-bytedevkit.raw of=/dev/sdX bs=1M && sync
 
 Reporting bugs
 -------------------------
