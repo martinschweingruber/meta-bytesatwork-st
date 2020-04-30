@@ -25,3 +25,17 @@ SRC_URI_class-devupstream += " \
 STM32MP_SOURCE_SELECTION = "github"
 
 KERNEL_CONFIG_FRAGMENTS += "${S}/arch/arm/configs/fragment-901-bytedevkit.config"
+
+kernel_do_deploy_append() {
+	KERNEL_DEVICETREE_FIRST=$(echo ${KERNEL_DEVICETREE} | awk '{ print $1 }')
+	ln -rs $deployDir/$KERNEL_DEVICETREE_FIRST $deployDir/${KERNEL_DEVICETREE_LINK}
+}
+
+FILES_${KERNEL_PACKAGE_NAME}-image += "boot/${KERNEL_DEVICETREE_LINK}"
+FILES_${KERNEL_PACKAGE_NAME}-imagebootfs += "boot/${KERNEL_DEVICETREE_LINK}"
+
+do_install_append() {
+	KERNEL_DEVICETREE_FIRST=$(echo ${KERNEL_DEVICETREE} | awk '{ print $1 }')
+	cd ${D}/${KERNEL_IMAGEDEST}
+	ln -rs $KERNEL_DEVICETREE_FIRST ${KERNEL_DEVICETREE_LINK}
+}
