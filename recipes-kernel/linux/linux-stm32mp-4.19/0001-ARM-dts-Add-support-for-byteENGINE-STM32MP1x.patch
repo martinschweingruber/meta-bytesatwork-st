@@ -1,4 +1,4 @@
-From fcce2919353ec2b2dfc6d12fe23269b45b2b1037 Mon Sep 17 00:00:00 2001
+From ff83403c972b4b65fdc5104e388e5e13599afd34 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Stephan=20D=C3=BCnner?= <stephan.duenner@bytesatwork.ch>
 Date: Wed, 19 Jun 2019 16:57:37 +0200
 Subject: [PATCH] ARM: dts: Add support for byteENGINE STM32MP1x
@@ -434,5 +434,5 @@ index 000000000000..6ce9c3b1ce92
 +	status = "okay";
 +};
 -- 
-2.21.0
+2.20.1
 

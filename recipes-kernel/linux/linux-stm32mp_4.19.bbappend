@@ -4,9 +4,9 @@
 FILESEXTRAPATHS_prepend := "${THISDIR}/${BP}:"
 
 # Increase PR if something changes
-PR="4"
+PR="5"
 
-SRC_URI += " \
+SRC_URI_class-devupstream += " \
 	file://0001-ARM-dts-Add-support-for-byteENGINE-STM32MP1x.patch \
 	file://0002-arm-dts-stm32mp157c-bytedevkit-Initital-version.patch \
 	file://0003-drm-add-youritech-panel-with-ili9806e-mipi-controlle.patch \
@@ -17,6 +17,11 @@ SRC_URI += " \
 	file://0008-arm-dts-stm32mp157c-bytedevkit-Enable-1gb-ethernet.patch \
 	file://0009-ARM-dts-Move-core-bytedevkit-description-into-a-dtsi.patch \
 	file://0010-ARM-dts-stm32mp175c-bytedevkit-common-Enable-rng1.patch \
+	file://0011-ARM-dts-stm32mp157c-bytedevkit-fix-usb-hs-fs-mapping.patch \
+	file://0012-ARM-dts-stm32-bytedevkit-Add-support-for-V1.1-and-re.patch \
+	file://0013-ARM-dts-stm32-bytedevkit-Add-tweaks-introduced-by-st.patch \
 "
+
+STM32MP_SOURCE_SELECTION = "github"
 
 KERNEL_CONFIG_FRAGMENTS += "${S}/arch/arm/configs/fragment-901-bytedevkit.config"

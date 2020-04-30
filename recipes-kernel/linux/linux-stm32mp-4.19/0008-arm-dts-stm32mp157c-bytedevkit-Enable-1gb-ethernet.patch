@@ -1,4 +1,4 @@
-From 7c5d155e96e5052d3dbd68aeb53b5a3eafd75bd3 Mon Sep 17 00:00:00 2001
+From 3d1ca224208abba9c54bbf41c14b13a1bc3e4f9a Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Oliver=20St=C3=A4bler?= <oliver.staebler@bytesatwork.ch>
 Date: Wed, 28 Aug 2019 08:54:36 +0200
 Subject: [PATCH] arm: dts: stm32mp157c-bytedevkit: Enable 1gb ethernet
@@ -41,5 +41,5 @@ index 9ef30933a11a..e6d2f58ef3d0 100644
  	};
  };
 -- 
-2.21.0
+2.20.1
 

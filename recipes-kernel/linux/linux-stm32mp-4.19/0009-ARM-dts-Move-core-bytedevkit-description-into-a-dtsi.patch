@@ -1,4 +1,4 @@
-From 8dbc37722d5cff44f30fa7b3bd40eb0bfe833821 Mon Sep 17 00:00:00 2001
+From 442c7a0c8d153466912ebd41a093a435ab70c5e8 Mon Sep 17 00:00:00 2001
 From: Serafin Leschke <serafin.leschke@bytesatwork.ch>
 Date: Thu, 5 Sep 2019 18:14:09 +0200
 Subject: [PATCH] ARM: dts: Move core bytedevkit description into a dtsi

@@ -1,4 +1,4 @@
-From 88d6d4fcdd6087fca935053c846a87466192642a Mon Sep 17 00:00:00 2001
+From a6e125068937c194390171cdea0ad5d3874c41a6 Mon Sep 17 00:00:00 2001
 From: Serafin Leschke <serafin.leschke@bytesatwork.ch>
 Date: Tue, 10 Sep 2019 14:14:29 +0200
 Subject: [PATCH] ARM: dts: stm32mp175c-bytedevkit-common: Enable rng1

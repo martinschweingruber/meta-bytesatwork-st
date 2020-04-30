@@ -1,4 +1,4 @@
-From 146cfece090d1de2eced02eb5dceb7d373001eda Mon Sep 17 00:00:00 2001
+From 8682604f128747dfb7149ff267680f0412ddcf92 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Oliver=20St=C3=A4bler?= <oliver.staebler@bytesatwork.ch>
 Date: Tue, 27 Aug 2019 14:44:45 +0200
 Subject: [PATCH] video/logo: baw: Move struct to correct file
@@ -33,5 +33,5 @@ index d4d5b93efe84..a71a70ba578f 100644
  extern const struct linux_logo *fb_find_logo(int depth);
  #ifdef CONFIG_FB_LOGO_EXTRA
 -- 
-2.21.0
+2.20.1
 

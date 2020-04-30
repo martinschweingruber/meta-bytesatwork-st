@@ -1,4 +1,4 @@
-From 6cbcad80de6fe808647d811ec6b3104a3eedc0fa Mon Sep 17 00:00:00 2001
+From 7f9575b06eed2d533a76b84648ca1e2eb2eb4c02 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Stephan=20D=C3=BCnner?= <stephan.duenner@bytesatwork.ch>
 Date: Thu, 8 Aug 2019 11:56:48 +0200
 Subject: [PATCH] ARM:dts: add usb-otg, ethernet, watchdog, dsi, backlight,
@@ -239,5 +239,5 @@ index dd2697be8aac..9ef30933a11a 100644
 +	status = "okay";
 +};
 -- 
-2.21.0
+2.20.1
 

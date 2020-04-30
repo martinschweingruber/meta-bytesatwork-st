@@ -1,4 +1,4 @@
-From ee226dbac9fcb79c8a166d05970b40ed34a8631d Mon Sep 17 00:00:00 2001
+From 66c46630753d71c5c0700c43830a30316a020138 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Oliver=20St=C3=A4bler?= <oliver.staebler@bytesatwork.ch>
 Date: Thu, 25 Jul 2019 15:14:21 +0200
 Subject: [PATCH] arm: dts: stm32mp157c-bytedevkit: Initital version

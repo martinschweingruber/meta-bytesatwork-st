@@ -1,4 +1,4 @@
-From 681c4ee25669785a7781f8065832a854a281927f Mon Sep 17 00:00:00 2001
+From 1475c9621f0c29a4e345db00cc09df2584cc14f0 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Stephan=20D=C3=BCnner?= <stephan.duenner@bytesatwork.ch>
 Date: Thu, 8 Aug 2019 11:59:41 +0200
 Subject: [PATCH] drm: add youritech panel with ili9806e mipi controller
@@ -516,5 +516,5 @@ index 000000000000..33b1b62e03fe
 +MODULE_DESCRIPTION("DRM Driver for Youritech MIPI DSI panel with ILI9806 Controller");
 +MODULE_LICENSE("GPL v2");
 -- 
-2.21.0
+2.20.1
 

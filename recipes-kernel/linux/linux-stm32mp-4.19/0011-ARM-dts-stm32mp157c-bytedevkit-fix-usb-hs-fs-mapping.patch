@@ -1,0 +1,101 @@
+From c9ab055e1725779025f2a2407ba4263f21bf144b Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Stephan=20D=C3=BCnner?= <stephan.duenner@bytesatwork.ch>
+Date: Tue, 14 Jan 2020 10:17:07 +0100
+Subject: [PATCH] ARM: dts: stm32mp157c-bytedevkit: fix usb hs / fs mapping
+
+---
+ .../dts/stm32mp157c-bytedevkit-common.dtsi    | 43 +++++++++++--------
+ 1 file changed, 24 insertions(+), 19 deletions(-)
+
+diff --git a/arch/arm/boot/dts/stm32mp157c-bytedevkit-common.dtsi b/arch/arm/boot/dts/stm32mp157c-bytedevkit-common.dtsi
+index 1dd8db70ea52..884504491657 100644
+--- a/arch/arm/boot/dts/stm32mp157c-bytedevkit-common.dtsi
++++ b/arch/arm/boot/dts/stm32mp157c-bytedevkit-common.dtsi
+@@ -23,17 +23,6 @@
+ 		reg = <0xc0000000 0x20000000>;
+ 	};
+ 
+-	usb_phy_tuning: usb-phy-tuning {
+-		st,hs-dc-level = <2>;
+-		st,fs-rftime-tuning;
+-		st,hs-rftime-reduction;
+-		st,hs-current-trim = <15>;
+-		st,hs-impedance-trim = <1>;
+-		st,squelch-level = <3>;
+-		st,hs-rx-offset = <2>;
+-		st,no-lsfs-sc;
+-	};
+-
+ 	usb_vbus: regulator-vbus {
+ 		compatible = "regulator-fixed";
+ 		regulator-name = "usb_en_vbus";
+@@ -41,6 +30,14 @@
+ 		enable-active-high;
+ 	};
+ 
++	usbotg_vbus: regulator-vbus-otg {
++		compatible = "regulator-fixed";
++		regulator-name = "usbotg_en_vbus";
++		gpio = <&gpiob 11 GPIO_ACTIVE_HIGH>;
++		enable-active-high;
++		regulator-boot-off;
++	};
++
+ 	panel_backlight: backlight {
+ 		compatible = "pwm-backlight";
+ 		pwms = <&pwm2 0 2000>;
+@@ -140,6 +137,12 @@
+ 			pinmux = <STM32_PINMUX('G', 8, ANALOG)>; /* TIM2_CH1 */
+ 		};
+ 	};
++
++	usbotg_hs_pins_a: usbotg_hs-0 {
++		pins {
++			pinmux = <STM32_PINMUX('A', 10, ANALOG)>; /* OTG_ID */            /* configure 'PA10' as ANALOG */
++		};
++	};
+ };
+ 
+ &uart4 {
+@@ -170,28 +173,30 @@
+ 	status = "okay";
+ };
+ 
++&usbh_ohci {
++	phys = <&usbphyc_port0>;           /* Use USBPHYC HS PHY port, mapped on USBH controller */
++	phy-names = "usb";
++	vbus-supply = <&usb_vbus>;
++	status = "okay";
++};
++
+ &usbphyc {
+ 	vdd3v3-supply = <&vdd_usb>;
+ 	status = "okay";
+ };
+ 
+-&usbphyc_port0 {
+-	st,phy-tuning = <&usb_phy_tuning>;
+-};
+ 
+ /* USB OTG Port (peripheral only) */
+ &usbotg_hs {
++	pinctrl-names = "default";
++	pinctrl-0 = <&usbotg_hs_pins_a>;
+ 	dr_mode = "peripheral";
+-	force-b-session-valid;
+ 	phys = <&usbphyc_port1 0>;
+ 	phy-names = "usb2-phy";
++	vbus-supply = <&usbotg_vbus>;
+ 	status = "okay";
+ };
+ 
+-&usbphyc_port1 {
+-	st,phy-tuning = <&usb_phy_tuning>;
+-};
+-
+ &ethernet0 {
+ 	status = "okay";
+ 	pinctrl-0 = <&ethernet0_rgmii_pins>;
+-- 
+2.20.1
+
