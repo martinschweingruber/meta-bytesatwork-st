@@ -1,4 +1,4 @@
-From 3a0d165e5738cf5d2e63f2a6bee3fb0526821265 Mon Sep 17 00:00:00 2001
+From ef45f51734310e1b8c1bd3ad9153e1debc701d0f Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Oliver=20St=C3=A4bler?= <oliver.staebler@bytesatwork.ch>
 Date: Wed, 24 Jul 2019 14:55:51 +0200
 Subject: [PATCH] arm: bytedevkit: Add target bytedevkit
@@ -20,5 +20,5 @@ index e9eac9d51e..03380db80e 100644
  source "board/cirrus/edb93xx/Kconfig"
  source "board/eets/pdu001/Kconfig"
 -- 
-2.21.0
+2.20.1
 

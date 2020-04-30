@@ -1,4 +1,4 @@
-From ef5a231389f5e10ce1e8939083a45b207c3137dc Mon Sep 17 00:00:00 2001
+From ce3f2ea16625a30ef7489edff39c3688e52edbd1 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Oliver=20St=C3=A4bler?= <oliver.staebler@bytesatwork.ch>
 Date: Wed, 24 Jul 2019 16:45:49 +0200
 Subject: [PATCH] arm: dts: bytedevkit-u-boot: Add initial version
@@ -175,5 +175,5 @@ index 0000000000..87014d667a
 +	regulator-always-on;
 +};
 -- 
-2.21.0
+2.20.1
 

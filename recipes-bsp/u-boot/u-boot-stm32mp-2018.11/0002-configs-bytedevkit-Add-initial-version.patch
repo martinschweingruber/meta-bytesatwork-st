@@ -1,20 +1,20 @@
-From e860df611298dba5a502ae9a23e4846b9961e807 Mon Sep 17 00:00:00 2001
+From 367ff87384719f8058a58e55d3e169e3fecb9fb9 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Oliver=20St=C3=A4bler?= <oliver.staebler@bytesatwork.ch>
 Date: Tue, 30 Jul 2019 11:01:52 +0200
 Subject: [PATCH] configs: bytedevkit: Add initial version
 
 Based on stm32mp15_basic_defconfig.
 ---
- configs/stm32mp157_bytedevkit_defconfig | 76 +++++++++++++++++++++++++
- 1 file changed, 76 insertions(+)
+ configs/stm32mp157_bytedevkit_defconfig | 73 +++++++++++++++++++++++++
+ 1 file changed, 73 insertions(+)
  create mode 100644 configs/stm32mp157_bytedevkit_defconfig
 
 diff --git a/configs/stm32mp157_bytedevkit_defconfig b/configs/stm32mp157_bytedevkit_defconfig
 new file mode 100644
-index 0000000000..f56f65da41
+index 0000000000..98d9f0a9d3
 --- /dev/null
 +++ b/configs/stm32mp157_bytedevkit_defconfig
-@@ -0,0 +1,76 @@
+@@ -0,0 +1,73 @@
 +CONFIG_ARM=y
 +CONFIG_ARCH_STM32MP=y
 +CONFIG_SYS_MALLOC_F_LEN=0x3000
@@ -48,7 +48,6 @@ index 0000000000..f56f65da41
 +CONFIG_CMD_MMC=y
 +CONFIG_CMD_REMOTEPROC=y
 +CONFIG_CMD_SF=y
-+CONFIG_CMD_BMP=y
 +CONFIG_CMD_CACHE=y
 +CONFIG_CMD_TIME=y
 +CONFIG_CMD_TIMER=y
@@ -88,9 +87,7 @@ index 0000000000..f56f65da41
 +CONFIG_SPI=y
 +CONFIG_DM_SPI=y
 +CONFIG_STM32_QSPI=y
-+CONFIG_STM32MP_WATCHDOG=y
-+CONFIG_FDT_FIXUP_PARTITIONS=y
 +# CONFIG_EFI_LOADER is not set
 -- 
-2.21.0
+2.20.1
 

@@ -1,4 +1,4 @@
-From d9b42d5d791adcdf96f49c5872144394f2dac71f Mon Sep 17 00:00:00 2001
+From 08ca869eaec8d37be3b494da31366c3fd8b33ea3 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Oliver=20St=C3=A4bler?= <oliver.staebler@bytesatwork.ch>
 Date: Wed, 24 Jul 2019 14:56:03 +0200
 Subject: [PATCH] stmp32mp1: Append target bytedevkit
@@ -8,12 +8,12 @@ Subject: [PATCH] stmp32mp1: Append target bytedevkit
  1 file changed, 20 insertions(+), 3 deletions(-)
 
 diff --git a/arch/arm/mach-stm32mp/Kconfig b/arch/arm/mach-stm32mp/Kconfig
-index fbc81953d7..8f556306a2 100644
+index 470b51ff19..5f204b76f0 100644
 --- a/arch/arm/mach-stm32mp/Kconfig
 +++ b/arch/arm/mach-stm32mp/Kconfig
-@@ -47,9 +47,26 @@ config TARGET_STM32MP1
+@@ -49,9 +49,26 @@ config TARGET_STM32MP1
  		STMicroelectronics MPU with core ARMv7
- 		dual core A7 for STM32MP153, monocore for STM32MP151
+ 		dual core A7 for STM32MP157/3, monocore for STM32MP151
  
 +config TARGET_BYTEDEVKIT
 +	bool "Support byteDEVKIT"
@@ -33,13 +33,13 @@ index fbc81953d7..8f556306a2 100644
 +		Enable byteDEVKIT as target.
 +
  config STM32MP1_RESET_HALT_WORKAROUND
- 	bool "workaround for reset halt deubg on stm32mp15x"
+ 	bool "workaround for reset halt debug on stm32mp15x"
 -	depends on TARGET_STM32MP1
 +	depends on (TARGET_STM32MP1 || TARGET_BYTEDEVKIT)
  	default y
  	help
  		Activate a workaround for current STM32MP15x revision B
-@@ -82,7 +99,7 @@ config STM32MP1_OPTEE
+@@ -83,7 +100,7 @@ config STM32MP1_OPTEE
  
  config SYS_MMCSD_RAW_MODE_U_BOOT_PARTITION_MMC2
  	hex "Partition to use for MMC2 to load U-Boot from"
@@ -48,7 +48,7 @@ index fbc81953d7..8f556306a2 100644
  	default 1
  	help
  	  Partition on the MMC2 to load U-Boot from when the MMC2 is being
-@@ -90,7 +107,7 @@ config SYS_MMCSD_RAW_MODE_U_BOOT_PARTITION_MMC2
+@@ -91,7 +108,7 @@ config SYS_MMCSD_RAW_MODE_U_BOOT_PARTITION_MMC2
  
  config STM32_ETZPC
  	bool "STM32 Extended TrustZone Protection"
@@ -58,5 +58,5 @@ index fbc81953d7..8f556306a2 100644
  	help
  	  Say y to enable STM32 Extended TrustZone Protection
 -- 
-2.21.0
+2.20.1
 
