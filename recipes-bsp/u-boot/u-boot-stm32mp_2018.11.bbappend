@@ -4,7 +4,7 @@
 FILESEXTRAPATHS_prepend := "${THISDIR}/${BP}:"
 
 # Increase PR if something changes
-PR="2"
+PR="3"
 
 SRC_URI_class-devupstream += " \
 	file://0001-board-bytedevkit-Add-initial-version-for-bytedevkit.patch \
@@ -18,6 +18,7 @@ SRC_URI_class-devupstream += " \
 	file://0009-pll-add-config-for-ethernet-without-clk-feedback-fro.patch \
 	file://0010-board-bytedevkit-Update-board-files-with-changes-fro.patch \
 	file://0011-bytedevkit-Disable-DISTRO_DEFAULTS.patch \
+	file://0012-byteengine-Add-qSPI-interface-support-for-booting-fr.patch \
 "
 
 STM32MP_SOURCE_SELECTION = "github"
