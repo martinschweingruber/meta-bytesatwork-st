@@ -4,35 +4,47 @@ meta-bytesatwork-st
 
 Introduction
 -------------------------
-This is the official OpenEmbedded/Yocto BSP layer for byteDEVKIT by [bytes at
+This is the official OpenEmbedded/Yocto BSP layer for byteDEVKIT STM32MP1 by [bytes at
 work AG](https://www.bytesatwork.io/).
 
-It is hosted on [github](https://github.com/bytesatwork/meta-bytesatwork-st.git)
+It is hosted on [github](https://github.com/bytesatwork/meta-bytesatwork-st.git).
 
 This layer depends on:
 
-	URI: https://github.com/bytesatwork/meta-st-stm32mp.git (due to pending PR)
+	URI: https://github.com/STMicroelectronics/meta-st-stm32mp
 	layer: meta-st-stm32mp
-	branch: warrior
+	branch: dunfell
+
 
 BSP
 -------------------------
 This meta layer provides the Board Support Package (U-Boot and Linux kernel)
-for "byteDEVKIT" by bytes at work AG. Simply set the variable MACHINE to
-"bytedevkit" to use this BSP.
+for "byteDEVKIT STM32MP1" by bytes at work AG. Simply set the variable MACHINE to
+"bytedevkit-stm32mp1" to use this BSP.
+
+Linux Kernel recipe: linux-stm32mp
+
+U-Boot recipe: u-boot-stm32mp
+
 
 SD Card
 -------------------------
-SD card images are created using *flashlayout* from [meta-st-stm32mp](https://github.com/STMicroelectronics/meta-st-stm32mp). Please make sure `gdisk` is installed on your system.
-
+SD card images are created using *wic*.
 The following example shows how to create a bootable SD card with the image
 `bytesatwork-minimal-image` from
 [meta-bytesatwork](https://github.com/bytesatwork/meta-bytesatwork.git) from a
 sourced Yocto environment:
 
-	cd $BUILDDIR/tmp/deploy/images/bytedevkit
-	./scripts/create_sdcard_from_flashlayout.sh flashlayout_bytesatwork-minimal-image/FlashLayout_sdcard_stm32mp157c-bytedevkit.tsv
-	dd if=flashlayout_bytesatwork-minimal-image_FlashLayout_sdcard_stm32mp157c-bytedevkit.raw of=/dev/sdX bs=1M && sync
+	cd $BUILDDIR
+	gunzip -c tmp/deploy/images/bytedevkit-stm32mp1/bytesatwork-minimal-image-bytedevkit-stm32mp1.wic.gz | dd of=/dev/sdX bs=1M && sync
+
+or using `bmap-tools`:
+
+	cd $BUILDDIR
+	bmaptool copy tmp/deploy/images/bytedevkit-stm32mp1/bytesatwork-minimal-image-bytedevkit-stm32mp1.wic.bmap /dev/sdX
+
+For more information on `bmap-tools`, follow [this](https://www.yoctoproject.org/docs/3.1/dev-manual/dev-manual.html#flashing-images-using-bmaptool) link.
+
 
 Reporting bugs
 -------------------------
