@@ -1,4 +1,4 @@
-From 367ff87384719f8058a58e55d3e169e3fecb9fb9 Mon Sep 17 00:00:00 2001
+From 63596f10b544f6c23c63719f5569a91792d838e6 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Oliver=20St=C3=A4bler?= <oliver.staebler@bytesatwork.ch>
 Date: Tue, 30 Jul 2019 11:01:52 +0200
 Subject: [PATCH] configs: bytedevkit: Add initial version

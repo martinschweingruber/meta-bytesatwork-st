@@ -1,4 +1,4 @@
-From 772cd22fcfc389e521c967a0c6ba1f9c07e59990 Mon Sep 17 00:00:00 2001
+From 9f5f072919fbed24a55e9e54b822ab6b876bcf12 Mon Sep 17 00:00:00 2001
 From: Daniel Ammann <daniel.ammann@bytesatwork.ch>
 Date: Mon, 2 Mar 2020 09:16:03 +0100
 Subject: [PATCH] board: bytedevkit: Update board files with changes from st

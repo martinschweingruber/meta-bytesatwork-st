@@ -1,4 +1,4 @@
-From ce3f2ea16625a30ef7489edff39c3688e52edbd1 Mon Sep 17 00:00:00 2001
+From 6d010a32fd440c6b26ee10d576007b847bb16627 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Oliver=20St=C3=A4bler?= <oliver.staebler@bytesatwork.ch>
 Date: Wed, 24 Jul 2019 16:45:49 +0200
 Subject: [PATCH] arm: dts: bytedevkit-u-boot: Add initial version

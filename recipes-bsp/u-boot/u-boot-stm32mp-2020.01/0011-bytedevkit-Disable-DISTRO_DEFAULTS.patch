@@ -1,4 +1,4 @@
-From 0835a08885478f7700adb5724f673511bd2335a5 Mon Sep 17 00:00:00 2001
+From 9fd30d5826e6c89c90fef9ec61b93aaba891525b Mon Sep 17 00:00:00 2001
 From: Daniel Ammann <daniel.ammann@bytesatwork.ch>
 Date: Mon, 20 Apr 2020 11:19:39 +0200
 Subject: [PATCH] bytedevkit: Disable DISTRO_DEFAULTS

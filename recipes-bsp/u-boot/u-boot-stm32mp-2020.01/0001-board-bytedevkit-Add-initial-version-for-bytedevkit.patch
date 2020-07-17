@@ -1,4 +1,4 @@
-From 9128c1399569e0b78ab53466ca629bd56be37cc2 Mon Sep 17 00:00:00 2001
+From fc3c2ac40d510fadbfd09857c89c792fd4df7433 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Oliver=20St=C3=A4bler?= <oliver.staebler@bytesatwork.ch>
 Date: Tue, 23 Jul 2019 15:46:12 +0200
 Subject: [PATCH] board: bytedevkit: Add initial version for bytedevkit

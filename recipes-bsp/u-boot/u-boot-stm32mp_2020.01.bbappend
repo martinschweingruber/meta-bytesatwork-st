@@ -4,7 +4,7 @@
 FILESEXTRAPATHS_prepend := "${THISDIR}/${BP}:"
 
 # Increase PR if something changes
-PR="3"
+PR="0"
 
 SRC_URI_class-devupstream += " \
 	file://0001-board-bytedevkit-Add-initial-version-for-bytedevkit.patch \
@@ -19,6 +19,7 @@ SRC_URI_class-devupstream += " \
 	file://0010-board-bytedevkit-Update-board-files-with-changes-fro.patch \
 	file://0011-bytedevkit-Disable-DISTRO_DEFAULTS.patch \
 	file://0012-byteengine-Add-qSPI-interface-support-for-booting-fr.patch \
+	file://0013-bytedevkit-upgrade-to-2020.01.patch \
 "
 
 STM32MP_SOURCE_SELECTION = "github"

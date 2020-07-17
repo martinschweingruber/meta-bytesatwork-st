@@ -1,4 +1,4 @@
-From ef45f51734310e1b8c1bd3ad9153e1debc701d0f Mon Sep 17 00:00:00 2001
+From 261481a14eefecca9900ca94df38d7c57c0ffa05 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Oliver=20St=C3=A4bler?= <oliver.staebler@bytesatwork.ch>
 Date: Wed, 24 Jul 2019 14:55:51 +0200
 Subject: [PATCH] arm: bytedevkit: Add target bytedevkit
@@ -8,10 +8,10 @@ Subject: [PATCH] arm: bytedevkit: Add target bytedevkit
  1 file changed, 1 insertion(+)
 
 diff --git a/arch/arm/Kconfig b/arch/arm/Kconfig
-index e9eac9d51e..03380db80e 100644
+index 36c9c2fecd..03bde580dd 100644
 --- a/arch/arm/Kconfig
 +++ b/arch/arm/Kconfig
-@@ -1498,6 +1498,7 @@ source "board/broadcom/bcm28155_ap/Kconfig"
+@@ -1789,6 +1789,7 @@ source "board/broadcom/bcm968580xref/Kconfig"
  source "board/broadcom/bcmcygnus/Kconfig"
  source "board/broadcom/bcmnsp/Kconfig"
  source "board/broadcom/bcmns2/Kconfig"

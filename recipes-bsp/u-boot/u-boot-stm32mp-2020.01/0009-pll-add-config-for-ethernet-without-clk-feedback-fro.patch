@@ -1,4 +1,4 @@
-From f70e7e880b0a5a233b06336958496d1019c9b165 Mon Sep 17 00:00:00 2001
+From 7db8801542ce7beafb1a5d3cd578371666f9e712 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Stephan=20D=C3=BCnner?= <stephan.duenner@bytesatwork.ch>
 Date: Thu, 8 Aug 2019 15:25:05 +0200
 Subject: [PATCH] pll: add config for ethernet without clk feedback from phy

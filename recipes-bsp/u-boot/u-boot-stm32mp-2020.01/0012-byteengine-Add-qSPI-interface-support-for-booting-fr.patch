@@ -1,4 +1,4 @@
-From a9ff47f662bdb942109f7279febb3c17d808f6ec Mon Sep 17 00:00:00 2001
+From 076d48c07fe529cbd4c10e599174ce2ea4a7c967 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Stephan=20D=C3=BCnner?= <stephan.duenner@bytesatwork.ch>
 Date: Tue, 15 Oct 2019 13:30:19 +0200
 Subject: [PATCH] byteengine: Add qSPI interface support for booting from

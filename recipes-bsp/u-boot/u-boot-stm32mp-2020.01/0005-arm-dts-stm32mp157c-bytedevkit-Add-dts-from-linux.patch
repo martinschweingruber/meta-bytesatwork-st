@@ -1,4 +1,4 @@
-From 85e909f4095f684e71ca2c13af01ebfc0733f5d7 Mon Sep 17 00:00:00 2001
+From df7ab48154abfec3f30a1bdb78eff2055c626552 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Oliver=20St=C3=A4bler?= <oliver.staebler@bytesatwork.ch>
 Date: Wed, 24 Jul 2019 14:56:46 +0200
 Subject: [PATCH] arm: dts: stm32mp157c-bytedevkit: Add dts from linux
