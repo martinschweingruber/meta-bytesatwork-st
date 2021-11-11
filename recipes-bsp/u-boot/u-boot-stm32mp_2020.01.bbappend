@@ -4,7 +4,7 @@
 FILESEXTRAPATHS_prepend := "${THISDIR}/${BP}:"
 
 # Increase PR if something changes
-PR="1"
+PR="2"
 
 SRC_URI_class-devupstream += " \
 	file://0001-board-bytedevkit-Add-initial-version-for-bytedevkit.patch \
@@ -25,6 +25,7 @@ SRC_URI_class-devupstream += " \
 	file://0016-board-bytedevkit-Introduce-choice-for-RAM-size.patch \
 	file://0017-arm-dts-stm32mp157c-bytedevkit-Support-different-RAM.patch \
 	file://0018-configs-bytedevkit_1g-Add-configuration-for-1GB.patch \
+	file://0019-Remove_redundant_YYLOC_global_declaration.patch \
 "
 
 STM32MP_SOURCE_SELECTION = "github"
