@@ -1,10 +1,10 @@
-# Copyright (C) 2019 Oliver Stäbler <oliver.staebler@bytesatwork.ch>
+# Copyright (C) 2022 bytes at work AG - https://www.bytesatwork.io
 # Released under the MIT license (see COPYING.MIT for the terms)
 
 FILESEXTRAPATHS:prepend := "${THISDIR}/${BP}:"
 
 # Increase PR if something changes
-PR="2"
+PR="0"
 
 SRC_URI:class-devupstream += " \
 	file://0001-board-bytedevkit-Add-initial-version-for-bytedevkit.patch \
@@ -25,7 +25,12 @@ SRC_URI:class-devupstream += " \
 	file://0016-board-bytedevkit-Introduce-choice-for-RAM-size.patch \
 	file://0017-arm-dts-stm32mp157c-bytedevkit-Support-different-RAM.patch \
 	file://0018-configs-bytedevkit_1g-Add-configuration-for-1GB.patch \
-	file://0019-Remove_redundant_YYLOC_global_declaration.patch \
+	file://0019-Remove-redundant-YYLOC-global-declaration.patch \
+	file://0020-bytedevkit-setup-single-rootfs-partition.patch \
+	file://0021-Create-checkpatch.yml.patch \
+	file://0022-arm-dts-stm32mp157c-bytedevkit-Add-support-for-byteD.patch \
+	file://0023-board-bytedevkit-Add-hwid-command.patch \
+	file://0024-bytedevkit-Use-hwid-check-to-select-dtb.patch \
 "
 
 STM32MP_SOURCE_SELECTION = "github"

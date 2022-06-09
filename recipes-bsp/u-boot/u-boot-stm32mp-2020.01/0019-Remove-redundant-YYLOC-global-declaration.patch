@@ -1,4 +1,4 @@
-From 3361f5fb421ca34f137548a056ddde74c3f1b8d7 Mon Sep 17 00:00:00 2001
+From 981f8e7c16682f3bcd518be904ec7a0c0fd2fb3d Mon Sep 17 00:00:00 2001
 From: Peter Robinson <pbrobinson@gmail.com>
 Date: Thu, 30 Jan 2020 09:37:15 +0000
 Subject: [PATCH] Remove redundant YYLOC global declaration
@@ -23,5 +23,5 @@ index fd825ebba6..24af549977 100644
  
  /* CAUTION: this will stop working if we ever use yyless() or yyunput() */
 -- 
-2.30.2
+2.20.1
 
