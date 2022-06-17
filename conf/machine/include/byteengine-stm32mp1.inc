@@ -6,7 +6,7 @@
 #@DESCRIPTION: byteENGINE STM32MP1 by bytes at work AG
 
 include conf/machine/include/st-machine-common-stm32mp.inc
-include conf/machine/include/tune-cortexa7.inc
+include conf/machine/include/arm/armv7a/tune-cortexa7.inc
 
 DEFAULTTUNE = "cortexa7thf-neon-vfpv4"
 

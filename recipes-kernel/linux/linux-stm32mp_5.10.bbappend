@@ -1,12 +1,12 @@
 # Copyright (C) 2019 Oliver Stäbler <oliver.staebler@bytesatwork.ch>
 # Released under the MIT license (see COPYING.MIT for the terms)
 
-FILESEXTRAPATHS_prepend := "${THISDIR}/linux-stm32mp-5.10:"
+FILESEXTRAPATHS:prepend := "${THISDIR}/linux-stm32mp-5.10:"
 
 # Increase PR if something changes
 PR="1"
 
-SRC_URI_class-devupstream += " \
+SRC_URI:class-devupstream += " \
 	file://0001-drm-add-youritech-panel-with-ili9806e-mipi-controlle.patch \
 	file://0002-video-logo-add-bytes-at-work-logo.patch \
 	file://0003-ARM-configs-Add-bytedevkit-fragment.patch \
