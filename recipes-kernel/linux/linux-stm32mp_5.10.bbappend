@@ -1,10 +1,10 @@
-# Copyright (C) 2019 Oliver Stäbler <oliver.staebler@bytesatwork.ch>
+# Copyright (C) 2022 bytes at work AG - https://www.bytesatwork.io
 # Released under the MIT license (see COPYING.MIT for the terms)
 
 FILESEXTRAPATHS:prepend := "${THISDIR}/linux-stm32mp-5.10:"
 
 # Increase PR if something changes
-PR="1"
+PR="0"
 
 SRC_URI:class-devupstream += " \
 	file://0001-drm-add-youritech-panel-with-ili9806e-mipi-controlle.patch \
@@ -19,6 +19,11 @@ SRC_URI:class-devupstream += " \
 	file://0010-ARM-dts-stm32-Fix-issue-with-usart1-when-using-no-sc.patch \
 	file://0011-ARM-configs-bytedevkit-Fix-boot-logo.patch \
 	file://0012-lib-iov_iter-initialize-flags-in-new-pipe_buffer.patch \
+	file://0013-Create-checkpatch.yml.patch \
+	file://0014-dt-bindings-vendor-prefixes-Add-bytes-at-work-AG.patch \
+	file://0015-dt-bindings-arm-bytesatwork-Add-module-and-board.patch \
+	file://0016-ARM-dts-stm32mp175c-bytedevkit-Add-support-for-byteD.patch \
+	file://0017-ARM-configs-bytedevkit-Fix-boot-logo-again.patch \
 "
 
 KERNEL_CONFIG_FRAGMENTS += "${S}/arch/arm/configs/fragment-901-bytedevkit.config"
