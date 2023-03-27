@@ -1,9 +1,8 @@
-meta-bytesatwork-st
-================================
+# meta-bytesatwork-st
 
 
-Introduction
--------------------------
+## Introduction
+
 This is the official OpenEmbedded/Yocto BSP layer for byteDEVKIT STM32MP1 by [bytes at
 work AG](https://www.bytesatwork.io/).
 
@@ -13,27 +12,26 @@ This layer depends on:
 
 	URI: https://github.com/STMicroelectronics/meta-st-stm32mp
 	layer: meta-st-stm32mp
-	branch: dunfell
+	branch: kirkstone
 
 
-BSP
--------------------------
+## BSP
+
 This meta layer provides the Board Support Package (U-Boot and Linux kernel)
-for "byteDEVKIT STM32MP1" by bytes at work AG. Simply set the variable MACHINE to
-"bytedevkit-stm32mp1" to use this BSP.
+for byteDEVKIT STM32MP1 by bytes at work AG. Simply set the variable MACHINE to
+`bytedevkit-stm32mp1` to use this BSP.
 
 Linux Kernel recipe: linux-stm32mp
 
 U-Boot recipe: u-boot-stm32mp
 
 
-SD Card
--------------------------
-SD card images are created using *wic*.
-The following example shows how to create a bootable SD card with the image
-`bytesatwork-minimal-image` from
-[meta-bytesatwork](https://github.com/bytesatwork/meta-bytesatwork.git) from a
-sourced Yocto environment:
+## SD Card
+
+SD card images are created using *wic*. The following example shows how to create a bootable SD card
+with the image `bytesatwork-minimal-image` from
+[meta-bytesatwork](https://github.com/bytesatwork/meta-bytesatwork.git) from a sourced Yocto
+environment:
 
 	cd $BUILDDIR
 	gunzip -c tmp/deploy/images/bytedevkit-stm32mp1/bytesatwork-minimal-image-bytedevkit-stm32mp1.wic.gz | dd of=/dev/sdX bs=1M && sync
@@ -43,9 +41,9 @@ or using `bmap-tools`:
 	cd $BUILDDIR
 	bmaptool copy tmp/deploy/images/bytedevkit-stm32mp1/bytesatwork-minimal-image-bytedevkit-stm32mp1.wic.bmap /dev/sdX
 
-For more information on `bmap-tools`, follow [this](https://docs.yoctoproject.org/3.1.14/dev-manual/dev-manual-common-tasks.html#flashing-images-using-bmaptool) link.
+You can find more information on `bmap-tools` in the [Yocto Project documentation](https://docs.yoctoproject.org/4.0/dev-manual/common-tasks.html#flashing-images-using-bmaptool).
 
 
-Reporting bugs
--------------------------
-Send pull requests, patches, comments or questions to yocto@bytesatwork.ch
+## Reporting bugs
+
+Send pull requests, patches, comments or questions to yocto@bytesatwork.ch.
