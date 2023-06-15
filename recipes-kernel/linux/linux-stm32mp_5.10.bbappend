@@ -24,6 +24,9 @@ SRC_URI:class-devupstream += " \
 	file://0015-dt-bindings-arm-bytesatwork-Add-module-and-board.patch \
 	file://0016-ARM-dts-stm32mp175c-bytedevkit-Add-support-for-byteD.patch \
 	file://0017-ARM-configs-bytedevkit-Fix-boot-logo-again.patch \
+	file://0018-Update-github-action-configuration-for-the-tool-that.patch \
+	file://0019-ARM-dts-stm32mp157c-byteengine-bytedevkit-fix-qspi_m.patch \
+	file://0020-github-workflows-update-version.patch \
 "
 
 KERNEL_CONFIG_FRAGMENTS += "${S}/arch/arm/configs/fragment-901-bytedevkit.config"
