@@ -4,7 +4,7 @@
 FILESEXTRAPATHS:prepend := "${THISDIR}/${BP}:"
 
 # Increase PR if something changes
-PR="0"
+PR="1"
 
 SRC_URI:class-devupstream += " \
 	file://0001-board-bytedevkit-Add-initial-version-for-bytedevkit.patch \
@@ -48,6 +48,8 @@ SRC_URI:class-devupstream += " \
 	file://0039-bytesatwork-bawconfig-introduce-Makefile.patch \
 	file://0040-bytesatwork-bawconfig-add-stm32mp1-ram-types.patch \
 	file://0041-board-bytedevkit-introduce-baw_config.patch \
+	file://0042-configs-bytedevkit-Enable-environment.patch \
+	file://0043-board-bytedevkit-Allow-environment-on-mmc-even-when-.patch \
 "
 
 STM32MP_SOURCE_SELECTION = "github"
