@@ -1,0 +1,81 @@
+From ab098d04ce23f839541cb8c7379100d03922e5c5 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Stephan=20D=C3=BCnner?= <stephan.duenner@bytesatwork.ch>
+Date: Wed, 26 Jun 2024 15:23:33 +0200
+Subject: [PATCH] bytedevkit: enable adc
+
+---
+ arch/arm/boot/dts/stm32mp157c-bytedevkit.dtsi | 26 +++++++++++++++++++
+ .../boot/dts/stm32mp157c-byteengine-m5.dtsi   | 10 +++----
+ 2 files changed, 31 insertions(+), 5 deletions(-)
+
+diff --git a/arch/arm/boot/dts/stm32mp157c-bytedevkit.dtsi b/arch/arm/boot/dts/stm32mp157c-bytedevkit.dtsi
+index 1a0eccca653e..23716ad23a7e 100644
+--- a/arch/arm/boot/dts/stm32mp157c-bytedevkit.dtsi
++++ b/arch/arm/boot/dts/stm32mp157c-bytedevkit.dtsi
+@@ -209,6 +209,12 @@ pins {
+ 			slew-rate = <0>;
+ 		};
+ 	};
++
++	adc1_pins: adc1-ain-0 {
++                pins {
++			pinmux = <STM32_PINMUX('A', 4, ANALOG)>, <STM32_PINMUX('A', 5, ANALOG)>, <STM32_PINMUX('A', 6, ANALOG)>, <STM32_PINMUX('B', 0, ANALOG)>;
++		};
++	};
+ };
+ 
+ &uart4 {
+@@ -420,3 +426,23 @@ &rtc {
+ &rng1 {
+ 	status = "okay";
+ };
++
++&vrefbuf {
++        regulator-min-microvolt = <2500000>;
++        regulator-max-microvolt = <2500000>;
++        vdda-supply = <&vdd>;
++        status = "okay";
++};
++
++&adc {
++	pinctrl-names = "default";
++	pinctrl-0 = <&adc1_pins>;
++	vdda-supply = <&vdda>;
++	vref-supply = <&vdda>;
++	status = "okay";
++	adc1: adc@0 {
++		status = "okay";
++		st,min-sample-time-nsecs = <5000>;
++                st,adc-channels = <0 1 3 9 18 19>;
++	};
++};
+diff --git a/arch/arm/boot/dts/stm3fin  b/arch/arm/boot/dts/stm32mp157c-byteengine-m5.dtsi
+index 0aec9c7fb3f1..c68b281eecad 100644
+--- a/arch/arm/boot/dts/stm32mp157c-byteengine-m5.dtsi
++++ b/arch/arm/boot/dts/stm32mp157c-byteengine-m5.dtsi
+@@ -175,10 +175,10 @@ v3v3: buck4 {
+ 				regulator-initial-mode = <0>;
+ 			};
+ 
+-			v1v8_audio: ldo1 {
+-				regulator-name = "v1v8_audio";
+-				regulator-min-microvolt = <1800000>;
+-				regulator-max-microvolt = <1800000>;
++			vdda: ldo1 {
++				regulator-name = "vdda";
++				regulator-min-microvolt = <3300000>;
++				regulator-max-microvolt = <3300000>;
+ 				regulator-always-on;
+ 				interrupts = <IT_CURLIM_LDO1 0>;
+ 			};
+@@ -207,7 +207,7 @@ vdd_usb: ldo4 {
+ 				regulator-always-on;
+ 			};
+ 
+-			vdda: ldo5 {
++			vdda_2v9: ldo5 {
+ 				regulator-name = "vdda";
+ 				regulator-min-microvolt = <2900000>;
+ 				regulator-max-microvolt = <2900000>;
+-- 
+2.39.2

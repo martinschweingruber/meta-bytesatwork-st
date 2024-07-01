@@ -27,6 +27,7 @@ SRC_URI:class-devupstream += " \
 	file://0018-Update-github-action-configuration-for-the-tool-that.patch \
 	file://0019-ARM-dts-stm32mp157c-byteengine-bytedevkit-fix-qspi_m.patch \
 	file://0020-github-workflows-update-version.patch \
+	file://0021-ARM-dts-stm32mp1-pharmasense-test.patch \
 "
 
 KERNEL_CONFIG_FRAGMENTS += "${S}/arch/arm/configs/fragment-901-bytedevkit.config"
